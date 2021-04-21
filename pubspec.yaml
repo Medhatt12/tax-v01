@@ -29,6 +29,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^9.0.0
+  badges: ^1.2.0
 
 dev_dependencies:
   flutter_test:
@@ -48,6 +49,11 @@ flutter:
    - assets/images/calendar-icon.png
    - assets/images/onlinepaymenticon.png
    - assets/images/andmoreicon.png
+   - assets/images/ownedunits-icon.png
+   - assets/images/inhibitedunit-icon.png
+   - assets/images/uninhabitedunit-icon.png
+   - assets/images/annualtax-icon.png
+   - assets/images/chart-icon.png
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg

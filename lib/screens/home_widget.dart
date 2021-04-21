@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:tax_v1/screens/Services_tab.dart';
 import 'package:tax_v1/screens/calculator_tab.dart';
@@ -39,11 +40,38 @@ class _HomeState extends State<Home> {
            icon: new Icon(Icons.dashboard_outlined, color: Colors.black,),
            activeIcon: new Icon(Icons.dashboard_outlined, color: Colors.red,),
            title: new Text('Dashboard', style: TextStyle(color: Colors.black),),
+         
          ),
          BottomNavigationBarItem(
-           icon: new Icon(Icons.home_repair_service_outlined, color: Colors.black,),
-           activeIcon: new Icon(Icons.home_repair_service_outlined, color: Colors.red,),
-           title: new Text('Services', style: TextStyle(color: Colors.black),),
+          //  icon: new Icon(Icons.home_repair_service_outlined, color: Colors.black,),
+          //  activeIcon: new Icon(Icons.home_repair_service_outlined, color: Colors.red,),
+          //  title: new Text('Services', style: TextStyle(color: Colors.black),),
+          icon: Badge(
+          shape: BadgeShape.square,
+          borderRadius: BorderRadius.circular(5),
+          position: BadgePosition.topEnd(top: -12, end: -20),
+          padding: EdgeInsets.all(2),
+          badgeContent: Text(
+            'SOON',
+            style: TextStyle(
+                color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
+          ),
+          child: new Icon(Icons.home_repair_service_outlined, color: Colors.black,),
+         ),
+            //activeIcon: new Icon(Icons.home_repair_service_outlined, color: Colors.red,),
+            activeIcon: Badge(
+          shape: BadgeShape.square,
+          borderRadius: BorderRadius.circular(5),
+          position: BadgePosition.topEnd(top: -12, end: -20),
+          padding: EdgeInsets.all(2),
+          badgeContent: Text(
+            'SOON',
+            style: TextStyle(
+                color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
+          ),
+          child: new Icon(Icons.home_repair_service_outlined, color: Colors.red,)
+          ),
+            title: new Text('Services', style: TextStyle(color: Colors.black),),
          ),
          BottomNavigationBarItem(
            icon: new Icon(Icons.calculate_outlined, color: Colors.black,),
