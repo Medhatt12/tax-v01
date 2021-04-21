@@ -15,7 +15,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
  int currentTabIndex =0;
  List<Widget> tabs = [
-    DashboardScreen(Colors.green),
+    DashboardScreen(),
     ServicesScreen(),
     CalculatorScreen(),
   ];
@@ -62,7 +62,7 @@ class _HomeState extends State<Home> {
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              child: Text('Hello X'), 
+              child: Text('Hello Medhat!'), 
               decoration: BoxDecoration(
                 color: Colors.white, 
               ),

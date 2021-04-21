@@ -72,22 +72,31 @@ class CalculatorScreen extends StatelessWidget {
           Align(
               alignment: Alignment.bottomCenter,
               child: OutlinedButton(
-                child: Text('Calculate Tax'),
-                style: OutlinedButton.styleFrom(
-                  primary: Colors.red,
-                  backgroundColor: Colors.grey[50],
-                  side: BorderSide(width: 1, color: Colors.grey[400]),
-                ),
-                onPressed: () {
-                  monthlyrentalvalue = double.parse(_text.text);
-                  //print(monthlyrentalvalue);
-                  print(taxCalculatorInhibited(monthlyrentalvalue));
-                  print('Pressed');
-                },
-                onLongPress: () {
-                  print('Long press');
-                },
-              ))
+                  child: Text('Calculate Tax'),
+                  style: OutlinedButton.styleFrom(
+                    primary: Colors.red,
+                    backgroundColor: Colors.grey[50],
+                    side: BorderSide(width: 1, color: Colors.grey[400]),
+                  ),
+                  onPressed: () {
+                    monthlyrentalvalue = double.parse(_text.text);
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          // Retrieve the text the that user has entered by using the
+                          // TextEditingController.
+                          content: Text("Your Annual Tax is "+taxCalculatorInhibited(monthlyrentalvalue).toString() +" EGP"),
+                        );
+                        //print(monthlyrentalvalue);
+                        //print();
+                        //print('Pressed');
+                      },);},
+                      onLongPress: () {
+                        print('Long press');
+                      },
+                    )
+                  )
         ]);
   }
 }
